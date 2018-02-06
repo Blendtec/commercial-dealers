@@ -1,0 +1,10 @@
+<h3 class="text-center"><a target="_blank" href="{{dealer.website}}">{{dealer.name}}</a></h3>
+<p *ngIf="dealer.contact"><i class="fa fa-address-card"></i>&#160;{{ dealer.contact}}</p>
+<p><i class="fa fa-map-marker"></i>&#160;{{ dealer.address1}}</p>
+<p *ngIf="dealer.address2">&#160;&#160;{{ dealer.address2}}</p>
+<p>&#160;&#160;{{ dealer.city}}, {{ dealer.stateCode}} {{dealer.zip}}</p>
+<p><i class="fa fa-phone"></i> <a href="tel://{{dealer.phone}}" title="{{dealer.phone}}">{{dealer.phone}}</a></p>
+<p *ngIf="dealer.fax"><i class="fa fa-fax">&#160;</i> {{dealer.fax}}</p>
+<p *ngIf="dealer.website"><i class="fa fa-external-link"></i>&#160;<a target="_blank" href="{{dealer.website}}">{{dealer.linkText ||
+  dealer.website}}</a></p>
+<hr/>
