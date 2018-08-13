@@ -24,7 +24,7 @@ before_script:
 script:
 - npm run test
 - echo $TRAVIS_BRANCH
-- if [ $TRAVIS_BRANCH = 'master' ]; PUBLIC_URL=/pages/$APP_NAME npm run build --deploy-url $S3_REGION/$S3_BUCKET/$APP_NAME/; fi
+- if [ $TRAVIS_BRANCH = 'master' ]; then PUBLIC_URL=/pages/$APP_NAME npm run build --deploy-url $S3_REGION/$S3_BUCKET/$APP_NAME/; fi
 - if [ $TRAVIS_BRANCH = 'stage' ]; then PUBLIC_URL=/pages/$APP_NAME npm run build --deploy-url $S3_REGION/$S3_STAGE_BUCKET/$APP_NAME/; fi
 - if [ $TRAVIS_BRANCH = 'develop' ]; then PUBLIC_URL=/pages/$APP_NAME npm run build --deploy-url $S3_REGION/$S3_DEV_BUCKET/$APP_NAME/; fi
 after_success:
