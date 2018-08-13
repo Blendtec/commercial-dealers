@@ -3,7 +3,6 @@ import Aux from '../../hoc/Aux/Aux'
 import Dealer from './Dealer/Dealer';
 import axios from '../../axios-dealer';
 import './Dealers.css';
-import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import DealersEnum from '../../enum/Dealer.enum.js';
 
 class Dealers extends Component {

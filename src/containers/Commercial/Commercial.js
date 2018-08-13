@@ -4,7 +4,6 @@ import Aux from '../../hoc/Aux/Aux';
 import States from '../../components/selectDealer/states';
 import Countries from '../../components/selectDealer/countries';
 import Dealers from '../../components/Dealers/Dealers';
-import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import CommercialEnum from '../../enum/Commercial.enum.js';
 
 class Commercial extends Component {
