@@ -36,7 +36,7 @@ deploy:
   secret_access_key:
     secure: $AMAZON_SECRET_ACCESS_KEY
   bucket: $S3_BUCKET
-  local-dir: dist
+  local-dir: build
   upload-dir: $APP_NAME
   skip_cleanup: true
   acl: public_read
@@ -54,7 +54,7 @@ deploy:
   secret_access_key:
     secure: $AMAZON_SECRET_ACCESS_KEY
   bucket: $S3_STAGE_BUCKET
-  local-dir: dist
+  local-dir: build
   upload-dir: $APP_NAME
   skip_cleanup: true
   acl: public_read
@@ -72,7 +72,7 @@ deploy:
   secret_access_key:
     secure: $AMAZON_SECRET_ACCESS_KEY
   bucket: $S3_DEV_BUCKET
-  local-dir: dist
+  local-dir: build
   upload-dir: $APP_NAME
   skip_cleanup: true
   acl: public_read
