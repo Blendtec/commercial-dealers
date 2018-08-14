@@ -38,16 +38,24 @@ class Commercial extends Component {
   }
 
   changeStateHandler = (event) => {
+  	let requestURL = null;
+  	if (event.target.value !== 'default') {
+  		requestURL = CommercialEnum.RESIDENTIALURL + event.target.value;
+  	}
   	this.setState({
   		valueOfState: event.target.value,
-  		requestURL: CommercialEnum.RESIDENTIALURL + event.target.value
+  		requestURL: requestURL
   	})
   }
 
   changeCountryHandler = (event) => {
+  	let requestURL = null;
+  	if (event.target.value !== 'default') {
+  		requestURL = CommercialEnum.INTERNATIONALURL + event.target.value;
+  	}
   	this.setState({
   		valueOfCountry: event.target.value,
-  		requestURL: CommercialEnum.INTERNATIONALURL + event.target.value
+  		requestURL: requestURL
   	})
   }
 	render() {

@@ -68,7 +68,7 @@ class Dealers extends Component {
 					});
 		}
 
-		if (!validDealer) {
+		if (!validDealer && this.state.dealers) {
 			dealersArray = <h3>{DealersEnum.NODEALERS}</h3>;
 		}
 		return (
