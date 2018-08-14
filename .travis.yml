@@ -22,6 +22,7 @@ before_script:
 - export DBUS_SESSION_BUS_ADDRESS=/dev/null
 - export DISPLAY=:99.0
 script:
+- npm run lint
 - npm run test
 - echo $TRAVIS_BRANCH
 - if [ $TRAVIS_BRANCH = 'master' ]; then PUBLIC_URL=https://s3.us-west-1.amazonaws.com/apps.blendtec.com/commercial-dealers npm run build --deploy-url $S3_REGION/$S3_BUCKET/$APP_NAME/; fi

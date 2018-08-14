@@ -3,7 +3,7 @@ import Aux from '../../hoc/Aux/Aux'
 import Dealer from './Dealer/Dealer';
 import axios from '../../axios-dealer';
 import './Dealers.css';
-import DealersEnum from '../../enum/Dealer.enum.js';
+import DealersEnum from '../../enum/Dealer.enum';
 
 class Dealers extends Component {
 	state = {
@@ -49,7 +49,7 @@ class Dealers extends Component {
 						if (dealer && !dealer.isRep && (dealer.phone || dealer.email || dealer.website)) {
 							dealerTitle = (<div className="grid__item_center"><h4 className="left-align">{DealersEnum.DEALERS}</h4><hr /></div>);
 							validDealer = true;
-							return <Dealer key={dealer.id} dealer={dealer} dealerClasses={dealerClasses}/>
+							return <Dealer key={dealer.id} {...dealer} dealerClasses={dealerClasses}/>
 						} else {
 							return null;
 						}
@@ -61,7 +61,7 @@ class Dealers extends Component {
 						if (rep && rep.isRep && (rep.phone || rep.email || rep.website)) {
 							repTitle = (<div className="grid__item_center"><h4 className="left-align">{DealersEnum.REPS}</h4><hr /></div>);
 							validDealer = true;
-							return <Dealer key={rep.id} dealer={rep} dealerClasses={repClasses}/>
+							return <Dealer key={rep.id} {...rep} dealerClasses={repClasses}/>
 						} else {
 							return null;
 						}
