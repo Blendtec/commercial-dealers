@@ -77,7 +77,6 @@ const dealer = (props) => {
 dealer.propTypes = {
   name: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
-  dealerClasses: PropTypes.string.isRequired,
   contact: PropTypes.string.isRequired,
   address1: PropTypes.string.isRequired,
   address2: PropTypes.string.isRequired,
