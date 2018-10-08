@@ -9,16 +9,12 @@ describe('<Dealer />', () => {
   let wrapper = null;
 
   beforeEach(() => {
-    const countryList = { id: 4, name: 'Premier Equipment Group, Inc.', nativeName: '', streetAddress: '', nativeStreetAddress: '', address1: '106 Battery Point Place', address2: '', city: 'Cary', stateCode: 'TN', locations: 'state-AL', zip: '37090', email: 'michaelpav@nc.rr.com', phone: '(919) 454-4199', fax: '', countryCode: 'US', isRep: true, website: 'http://www.premierequip.com', linkText: 'http://www.premierequip.com', registrationUri: '', contact: 'Michael Pavelka' };
+    const countryList = { id: 4, name: 'Premier Equipment Group, Inc.', nativeName: '', streetAddress: '', nativeStreetAddress: '', address1: '106 Battery Point Place', address2: '', city: 'Cary', stateCode: 'TN', locations: 'state-AL', zip: '37090', email: 'michaelpav@nc.rr.com', phone: '(919) 454-4199', fax: '', countryCode: 'US', isRep: true, website: 'http://www.premierequip.com', linkText: 'http://www.premierequip.com', registrationUri: '', contact: 'Michael Pavelka', type: 'Commercial' };
 		 wrapper = shallow(<Dealer {...countryList} />);
   });
 
   it('should have name', () => {
-    expect(wrapper.contains(<h4 className="left-align"><a rel="noopener noreferrer" target="_blank" href="http://www.premierequip.com">Premier Equipment Group, Inc.</a></h4>)).toBeTruthy();
-  });
-
-  it('should have Contact Name', () => {
-    expect(wrapper.contains(<p><i className="fa fa-address-card" />&nbsp;Michael Pavelka</p>)).toBeTruthy();
+    expect(wrapper.contains(<h4 className="left-align"><a rel="noopener noreferrer" target="_blank" href="http://www.premierequip.com">Premier Equipment Group, Inc.</a> (Commercial)</h4>)).toBeTruthy();
   });
 
   it('should have Address1', () => {

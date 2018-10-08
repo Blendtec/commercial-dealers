@@ -25,10 +25,6 @@ const dealer = (props) => {
   if (props.email) {
     email = <p><a href="mailto:{props.email}" target="_top">{props.email}</a></p>;
   }
-  let contact = null;
-  if (props.contact) {
-    contact = <p><i className="fa fa-address-card" />&#160;{ props.contact}</p>;
-  }
   let address1 = null;
   if (props.address1) {
     address1 = <p><i className="fa fa-map-marker" />&#160;{ props.address1}</p>;
