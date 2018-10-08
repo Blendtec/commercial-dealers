@@ -7,18 +7,23 @@ const dealer = (props) => {
   if (props.website && !webLink.match('http')) {
     webLink = `http://${webLink}`;
   }
+  let type = null;
+  if (props.type) {
+    type = ` (${props.type})`;
+  }
   let name = (
     <h4 className="left-align">
       <a rel="noopener noreferrer" target="_blank" href={webLink}>
         {props.name}
       </a>
+      {type}
     </h4>);
   if (!props.website) {
-    name = <h4 className="left-align">{props.name}</h4>;
+    name = <h4 className="left-align">{props.name}{type}</h4>;
   }
-  let contact = null;
-  if (props.contact) {
-    contact = <p><i className="fa fa-address-card" />&#160;{ props.contact}</p>;
+  let email = null;
+  if (props.email) {
+    email = <p><a href="mailto:{props.email}" target="_top">{props.email}</a></p>;
   }
   let address1 = null;
   if (props.address1) {
@@ -61,12 +66,12 @@ const dealer = (props) => {
     <div className={classes} style={{ height: '400px' }}>
       {name}
       {nativeName}
-      {contact}
       {streetAddress}
       {nativeStreetAddress}
       {address1}
       {address2}
       {addressAdv}
+      {email}
       {phone}
       {fax}
       {website}
