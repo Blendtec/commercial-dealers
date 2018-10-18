@@ -49,10 +49,6 @@ const dealer = (props) => {
   if (props.website) {
     website = (<p style={{ fontSize: '.8em' }}><a rel="noopener noreferrer" target="_blank" href={webLink}>{props.linkText ? props.linkText : props.website}</a></p>);
   }
-  let streetAddress = null;
-  if (props.streetAddress) {
-    streetAddress = (<p>{props.streetAddress}</p>);
-  }
   let nativeName = null;
   if (props.nativeName) {
     nativeName = <h4>{props.nativeName}</h4>;
