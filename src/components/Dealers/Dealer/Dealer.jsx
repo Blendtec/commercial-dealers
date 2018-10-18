@@ -66,7 +66,6 @@ const dealer = (props) => {
     <div className={classes} style={{ height: '400px' }}>
       {name}
       {nativeName}
-      {streetAddress}
       {nativeStreetAddress}
       {address1}
       {address2}

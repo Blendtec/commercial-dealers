@@ -4,7 +4,7 @@ const Commercial = Object.freeze({
     USA: 'United States',
     INTERNATIONAL: 'International',
     STATESURL: '/states.json',
-    COUNTRIESURL: '/countries.json',
+    COUNTRIESURL: '/countries_iso3.json',
     DEFAULT: 'default',
 });
 
